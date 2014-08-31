@@ -1,5 +1,11 @@
 /**
- * Fixes issue described here: http://www.sencha.com/forum/showthread.php?290747-Grid-panel-with-cellwrap-and-load-data-store&p=1062855&viewfull=1#post1062855
+ * Fixes JS exception thrown from Ext.grid.plugin.BufferedRenderer in some circumstances.
+ * 
+ * The onViewRefresh method below was copied verbatim from the framework source
+ * and the view.on({...}) call starting on line 27 was modified to create a closure
+ * for re-calling onViewRefresh with the original `view` and `records` arguments.
+ * 
+ * Discussion: http://www.sencha.com/forum/showthread.php?290747-Grid-panel-with-cellwrap-and-load-data-store
  */
 Ext.define('Jarvus.hotfixes.ext.grid.plugin.BufferedRenderer.BoxReadyViewRefreshArgs', {
     override: 'Ext.grid.plugin.BufferedRenderer',
