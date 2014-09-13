@@ -9,6 +9,7 @@
  */
 Ext.define('Jarvus.hotfixes.ext.grid.plugin.BufferedRenderer.BoxReadyViewRefreshArgs', {
     override: 'Ext.grid.plugin.BufferedRenderer',
+    compatibility: '5.0.1255',
 
     onViewRefresh: function(view, records) {
         var me = this,
