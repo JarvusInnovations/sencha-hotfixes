@@ -8,7 +8,7 @@
  */
 Ext.define('Jarvus.hotfixes.ext.form.field.Tag.FindRecord', {
     override: 'Ext.form.field.Tag',
-    compatibility: '5.0.1255',
+//    compatibility: '5.0.1255',
 
     findRecord: function(field, value) {
         return this.getStore().findRecord(field, value);

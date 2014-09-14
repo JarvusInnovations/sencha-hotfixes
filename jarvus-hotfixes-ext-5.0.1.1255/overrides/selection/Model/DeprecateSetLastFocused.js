@@ -9,7 +9,7 @@
  */
 Ext.define('Jarvus.hotfixes.ext.selection.Model.DeprecateSetLastFocused', {
     override: 'Ext.selection.Model',
-    compatibility: '5.0.1255',
+//    compatibility: '5.0.1255',
 
     setLastFocused: Ext.emptyFn
 });
