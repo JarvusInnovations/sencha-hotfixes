@@ -1,3 +1,5 @@
+/* jshint undef: true, unused: true, browser: true, quotmark: single, curly: true */
+/* global Ext */
 Ext.define('Jarvus.hotfixes.touch.field.Select.ResetOriginalValue', {
 	override: 'Ext.field.Select',
 
@@ -13,7 +15,7 @@ Ext.define('Jarvus.hotfixes.touch.field.Select.ResetOriginalValue', {
         	if (me.getAutoSelect() && store.getCount()) {
         		record = store.getAt(0);
         	}  else {
-        		recurd = null;
+        		record = null;
         	}
         }
 
@@ -34,5 +36,5 @@ Ext.define('Jarvus.hotfixes.touch.field.Select.ResetOriginalValue', {
         me.setValue(me.getValue());
 
         me[me.isDirty() ? 'showClearIcon' : 'hideClearIcon']();
-    },
+    }
 });
