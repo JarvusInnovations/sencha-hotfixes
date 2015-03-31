@@ -6,5 +6,9 @@
 Ext.define('Jarvus.hotfixes.ext.dom.Element.ValidID', {
     override: 'Ext.dom.Element',
 
-    validIdRe: /^[a-z][a-z0-9\-_:.]*$/i
+    validIdRe: /^[a-z][a-z0-9\-_:.]*$/i,
+    
+    getObservableId: function() {
+        return (this.observableId = this.callParent().replace(/([.:])/g, "\\$1"));
+    }
 });
