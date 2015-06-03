@@ -2,7 +2,7 @@
  *
  * Discussion: https://www.sencha.com/forum/showthread.php?294061
  */
-Ext.define('Jarvus.hotfixes.ext.data.FieldValidate', {
+Ext.define('Jarvus.hotfixes.ext.data.field.FieldValidate', {
     override: 'Ext.data.field.Field',
 
     validate: function(value, separator, errors, record) {
