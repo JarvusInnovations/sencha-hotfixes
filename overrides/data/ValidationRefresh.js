@@ -37,7 +37,7 @@ Ext.define('Jarvus.hotfixes.ext.data.ValidateRefresh', {
                 }
 
                 if (field.validate !== Ext.emptyFn) {
-                    msg = field.validate(val, sep);
+                    msg = field.validate(val, sep, false, record);
                     if (msg !== true) {
                         error = msg || defaultMessage;
                     }
