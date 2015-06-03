@@ -12,6 +12,7 @@ Hotfix packages are currently being maintained for:
 - [ext-5.0.0.736](https://github.com/JarvusInnovations/sencha-hotfixes/tree/ext-5.0.0.736)
 - [ext-5.0.0.970](https://github.com/JarvusInnovations/sencha-hotfixes/tree/ext-5.0.0.970)
 - [ext-5.0.1.1255](https://github.com/JarvusInnovations/sencha-hotfixes/tree/ext-5.0.1.1255)
+- [ext-5.1.1.451](https://github.com/JarvusInnovations/sencha-hotfixes/tree/ext-5.1.1.451)
 
 ## Using hotfixes
 This repository has separate branches for each framework+version, with the master branch serving as a template for new branches.
