@@ -1,11 +1,11 @@
 /**
  *
- *
+ * Discussion: https://www.sencha.com/forum/showthread.php?294061
  */
 Ext.define('Jarvus.hotfixes.ext.data.FieldValidate', {
     override: 'Ext.data.field.Field',
 
-    validate: function(value, separator, errors) {
+    validate: function(value, separator, errors, record) {
         var me = this,
             ret = '',
             result, validator, validators, length, i;
@@ -18,7 +18,7 @@ Ext.define('Jarvus.hotfixes.ext.data.FieldValidate', {
 
         for (i = 0, length = validators.length; i < length; ++i) {
             validator = validators[i];
-            result = validator.validate(value); // we have no record to pass
+            result = validator.validate(value, record);
 
             if (result !== true) {
                 result = result || me.defaultInvalidMessage;
