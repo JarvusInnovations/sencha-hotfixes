@@ -12,6 +12,7 @@ Ext.define('Jarvus.hotfixes.ext.form.field.Tag.ClearInputElOnSelectionChange', {
 
     updateValue: function() {
         var me = this,
+            inputEl = me.inputEl,
             valueArray = me.valueCollection.getRange(),
             len = valueArray.length,
             i;
@@ -23,6 +24,13 @@ Ext.define('Jarvus.hotfixes.ext.form.field.Tag.ClearInputElOnSelectionChange', {
         // Set the value of this field. If we are multi-selecting, then that is an array.
         me.setHiddenValue(valueArray);
         me.value = me.multiSelect ? valueArray : valueArray[0];
+
+        // Override code start
+        if(inputEl) {
+            inputEl.dom.value = '';
+        }
+        // Override code end
+
         if (!Ext.isDefined(me.value)) {
             me.value = undefined;
         }
