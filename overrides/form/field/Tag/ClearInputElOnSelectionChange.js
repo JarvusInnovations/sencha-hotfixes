@@ -1,6 +1,6 @@
 /**
  * Fixes issue where typed text is retained in input after an autocomplete suggestion is selected
- * 
+ *
  * Solution is to clear input el when value changes.
  *
  */
@@ -37,5 +37,5 @@ Ext.define('Jarvus.hotfixes.ext.form.field.Tag.ClearInputElOnSelectionChange', {
 
         me.applyMultiselectItemMarkup();
         me.checkChange();
-    },
+    }
 });
