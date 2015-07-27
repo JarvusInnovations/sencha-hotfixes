@@ -6,9 +6,9 @@
  * Discussion: https://www.sencha.com/forum/showthread.php?303634
  */
 Ext.define('Jarvus.hotfixes.RequestUrlParams', {
-	override: 'Ext.data.Request',
+    override: 'Ext.data.Request',
 
-	config: {
-		urlParams: null
-	}
+    config: {
+        urlParams: null
+    }
 });
