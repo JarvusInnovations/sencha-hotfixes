@@ -33,7 +33,7 @@ Ext.define('Jarvus.hotfixes.util.GroupCollectionIdChange', {
 
         // This checks whether or not the item is in the collection.
         // Short optimization instead of calling contains since we already have the key here.
-        if (group.get(itemKey) !== item) {
+        if (group.get(oldKey || itemKey) !== item) {
             if (group.getCount() > 0 && source.getSorters().getCount() === 0) {
                 // We have items in the group & it's not sorted, so find the
                 // correct position in the group to insert.
@@ -50,7 +50,7 @@ Ext.define('Jarvus.hotfixes.util.GroupCollectionIdChange', {
                 group.insert(index, item);
             }
         } else {
-            group.itemChanged(item);
+            group.itemChanged(item, null, oldKey);
         }
 
         if (groupKey !== oldGroupKey && (oldGroupKey === 0 || oldGroupKey)) {
