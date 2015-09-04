@@ -29,10 +29,10 @@ Ext.define('Jarvus.hotfixes.util.GroupCollectionIdChange', {
             addGroups = [group];
         }
 
-        if (group.get(itemKey) !== item) {
+        if (group.get(oldKey || itemKey) !== item) {
             group.add(item);
         } else {
-            group.itemChanged(item);
+            group.itemChanged(item, null, oldKey);
         }
 
         if (groupKey !== oldGroupKey && (oldGroupKey === 0 || oldGroupKey)) {
