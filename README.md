@@ -1,6 +1,6 @@
 # sencha-hotfixes
 
-Provides a jarvus-hotfixes package for each ExtJS / Sencha Touch version containing all hotfixes managed by Jarvus Innovations
+Provides a jarvus-hotfixes package for each ExtJS / Sencha Touch version containing all hotfixes managed by Jarvus Innovations. These packages strictly contains *only* overrides that restore framework components to their intended/documented behavior, and do not add features or opinionate framework usage. Our intention is that these packages be safe to include in every project from the start to save developers from going down framework bug rabbit-holes that have already been gone down.
 
 ## Supported frameworks
 Hotfix packages are currently being maintained for:
@@ -38,4 +38,4 @@ In order for the overrides contained in the package to be automatically loaded b
 
 
 ## Pull requests
-Pull requests containing new or improved hotfixes are welcome! We will test and review them before incorporating into our hotfix packages
+**Pull requests containing new or improved hotfixes are welcome!** We will test and review them before incorporating into our hotfix packages
