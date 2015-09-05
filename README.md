@@ -1,6 +1,6 @@
 # sencha-hotfixes
 
-Packages for each ExtJS / Sencha Touch version containing all hotfixes managed by Jarvus Innovations
+Provides a jarvus-hotfixes package for each ExtJS / Sencha Touch version containing all hotfixes managed by Jarvus Innovations
 
 ## Supported frameworks
 Hotfix packages are currently being maintained for:
@@ -20,7 +20,7 @@ This repository has separate branches for each framework+version, with the maste
 ### Step 1) Clone a branch into your <kbd>packages</kbd> folder
 Open a terminal in your app's or workspace's <kbd>packages</kbd> directory and clone the branch for the framework+version you're using into a directory called <kbd>jarvus-hotfixes</kbd>:
 
-  `git clone -b touch-2.4.1.527 https://github.com/JarvusInnovations/sencha-hotfixes.git jarvus-hotfixes`
+  `git clone -b touch/2/4/1/527 https://github.com/JarvusInnovations/sencha-hotfixes.git jarvus-hotfixes`
 
 ### Step 2) Add package to app's requirements
 Open the <kbd>app.json</kbd> file in your app's directory and add `"jarvus-hotfixes"` to the array following the existing `"requires"` attribute:
