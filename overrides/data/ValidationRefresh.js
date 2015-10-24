@@ -1,5 +1,5 @@
 /**
- *
+ * Pass record to validate method
  * Discussion: https://www.sencha.com/forum/showthread.php?294061
  */
 Ext.define('Jarvus.hotfixes.ext.data.ValidateRefresh', {
@@ -37,7 +37,7 @@ Ext.define('Jarvus.hotfixes.ext.data.ValidateRefresh', {
                 }
 
                 if (field.validate !== Ext.emptyFn) {
-                    msg = field.validate(val, sep);
+                    msg = field.validate(val, sep, null, record);
                     if (msg !== true) {
                         error = msg || defaultMessage;
                     }
