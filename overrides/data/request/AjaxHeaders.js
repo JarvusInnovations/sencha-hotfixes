@@ -33,6 +33,7 @@ Ext.define('Jarvus.hotfixes.ext.data.request.AjaxHeaders', {
             requestId: me.id,
             status: xhr.status,
             statusText: xhr.statusText,
+            headers: headers,
             getResponseHeader: me._getHeader,
             getAllResponseHeaders: me._getHeaders
         };
