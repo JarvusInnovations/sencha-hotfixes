@@ -31,7 +31,7 @@ Ext.define('Jarvus.hotfixes.data.StoreTrackRemoved', {
             needsSync = true;
         }
 
-        if (toDestroy.length > 0) {
+        if (toDestroy && toDestroy.length > 0) {
             operations.destroy = toDestroy;
             needsSync = true;
         }
