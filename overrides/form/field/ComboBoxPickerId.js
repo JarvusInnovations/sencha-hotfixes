@@ -6,9 +6,8 @@
  * Solution: just comment nonexistent pickerId when component boundlist creates. Since this pickerId is
  * nowhere used this should be okay and Ext.Component will make sure about unique identifier by itself.
  *
- * Discussion: https://www.sencha.com/forum/showthread.php?303101-2nd-Paged-Combo-without-Id-fails-to-quot-Drop-quot-due-to-duplicate-Id-registration
+ * Discussion: https://www.sencha.com/forum/showthread.php?303101
  */
-
 Ext.define('Jarvus.hotfixes.form.field.ComboBoxPickerId', {
     override: 'Ext.form.field.ComboBox',
 
