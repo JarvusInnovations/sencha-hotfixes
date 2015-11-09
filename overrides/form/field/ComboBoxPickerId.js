@@ -16,7 +16,6 @@ Ext.define('Jarvus.hotfixes.form.field.ComboBoxPickerId', {
             picker,
             pickerCfg = Ext.apply({
                 xtype: 'boundlist',
-                id: me.pickerId,
                 pickerField: me,
                 selectionModel: me.pickerSelectionModel,
                 floating: true,
