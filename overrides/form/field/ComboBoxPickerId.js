@@ -9,7 +9,7 @@
  * Discussion: https://www.sencha.com/forum/showthread.php?303101-2nd-Paged-Combo-without-Id-fails-to-quot-Drop-quot-due-to-duplicate-Id-registration
  */
 
-Ext.define('Jarvus.hotfixes.form.field.ComboBox', {
+Ext.define('Jarvus.hotfixes.form.field.ComboBoxPickerId', {
     override: 'Ext.form.field.ComboBox',
 
     createPicker: function() {
