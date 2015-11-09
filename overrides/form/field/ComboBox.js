@@ -11,11 +11,13 @@
 
 Ext.define('Jarvus.hotfixes.form.field.ComboBox', {
     override: 'Ext.form.field.ComboBox',
+
     createPicker: function() {
         var me = this,
             picker,
             pickerCfg = Ext.apply({
                 xtype: 'boundlist',
+                id: me.pickerId,
                 pickerField: me,
                 selectionModel: me.pickerSelectionModel,
                 floating: true,
@@ -27,12 +29,10 @@ Ext.define('Jarvus.hotfixes.form.field.ComboBox', {
                 tpl: me.tpl
             }, me.listConfig, me.defaultListConfig);
 
-
         picker = me.picker = Ext.widget(pickerCfg);
         if (me.pageSize) {
             picker.pagingToolbar.on('beforechange', me.onPageChange, me);
         }
-
 
         // We limit the height of the picker to fit in the space above
         // or below this field unless the picker has its own ideas about that.
@@ -49,10 +49,8 @@ Ext.define('Jarvus.hotfixes.form.field.ComboBox', {
             scope: me
         });
 
-
         picker.getNavigationModel().navigateOnSpace = false;
 
-
         return picker;
-    }
+    },
 });
