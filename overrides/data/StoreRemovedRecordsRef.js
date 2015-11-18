@@ -5,6 +5,9 @@
  * Jarvus.hotfixes.ext.data.ProxyStoreRemovedRecordsRef however changes
  * getRemovedRecords() to return a cloned array instead for public use.
  *
+ * Use the private array reference directly instead of calling the public
+ * getter.
+ *
  * Discussion: https://www.sencha.com/forum/showthread.php?301217
  */
 Ext.define('Jarvus.hotfixes.ext.data.StoreRemovedRecordsRef', {
@@ -14,7 +17,7 @@ Ext.define('Jarvus.hotfixes.ext.data.StoreRemovedRecordsRef', {
         var me = this,
             len = records.length,
             lastChunk = info ? !info.next : false,
-            removed = me.getRemovedRecords(),
+            removed = me.removed,
             ignoreAdd = me.ignoreCollectionAdd,
             session = me.getSession(),
             replaced = info && info.replaced,
