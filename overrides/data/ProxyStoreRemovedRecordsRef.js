@@ -8,11 +8,11 @@
  *
  * Discussion: https://www.sencha.com/forum/showthread.php?301217
  */
-Ext.define('Jarvus.hotfixes.ext.data.StoreRemovedRecordsRef', {
+Ext.define('Jarvus.hotfixes.ext.data.ProxyStoreRemovedRecordsRef', {
     override: 'Ext.data.ProxyStore',
 
     getRemovedRecords: function() {
         var removed = this.removed;
         return removed ? Ext.Array.clone(removed) : removed;
-    },
+    }
 });
