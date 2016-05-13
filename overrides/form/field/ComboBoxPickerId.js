@@ -50,5 +50,5 @@ Ext.define('Jarvus.hotfixes.form.field.ComboBoxPickerId', {
         picker.getNavigationModel().navigateOnSpace = false;
 
         return picker;
-    },
+    }
 });

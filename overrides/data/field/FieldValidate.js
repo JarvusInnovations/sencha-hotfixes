@@ -38,5 +38,5 @@ Ext.define('Jarvus.hotfixes.ext.data.field.FieldValidate', {
         }
 
         return ret || true;
-    },
+    }
 });
