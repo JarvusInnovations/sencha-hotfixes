@@ -1,5 +1,6 @@
 /**
- *
+ * Fixes issue where combobox will not allow you to clear its value if forceSelection is enabled
+ * and allowBlank is enabled
  */
 
 Ext.define('Jarvus.hotfixes.ext.form.field.ComboBox.ForceSelectionAllowBlank', {
@@ -29,9 +30,12 @@ Ext.define('Jarvus.hotfixes.ext.form.field.ComboBox.ForceSelectionAllowBlank', {
                     if (me.getDisplayValue([me.getRecordDisplayData(rec)]) !== displayValue) {
                         me.select(rec, true);
                     }
-                } else if (lastRecords) {
+                } else if (lastRecords && (!me.allowBlank || me.rawValue)) {
                     me.setValue(lastRecords);
                 } else {
+                    if(lastRecords) {
+                        delete me.lastSelectedRecords;
+                    }
                     // We need to reset any value that could have been set in the dom before or during a store load
                     // for remote combos.  If we don't reset this, then ComboBox#getValue() will think that the value
                     // has changed and will then set `undefined` as the .value for forceSelection combos.  This then
