@@ -4,6 +4,7 @@
  * from working when it gets invoked from the change event
  *
  * Discussion: https://www.sencha.com/forum/showthread.php?304938
+ * Fiddle: https://fiddle.sencha.com/#fiddle/1c45
  */
 Ext.define('Jarvus.hotfixes.app.route.RouterOverridable', {
     override: 'Ext.app.route.Router'
