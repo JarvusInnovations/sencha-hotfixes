@@ -1,6 +1,10 @@
 /**
- * Handle getRemovedRecords() returning null when trackRemoved is disabled
+ * Handle getRemovedRecords() returning null when trackRemoved is disabled.
+ *
+ * Fiddle shows this issue persists in ext-6.0.1.250 but is fixed in ext-6.0.2.437
+ *
  * Discussion: https://www.sencha.com/forum/showthread.php?306558
+ * Fiddle: https://fiddle.sencha.com/#fiddle/10n1
  */
 Ext.define('Jarvus.hotfixes.data.StoreTrackRemoved', {
     override: 'Ext.data.ProxyStore',
