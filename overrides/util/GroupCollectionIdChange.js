@@ -2,7 +2,10 @@
  * Fixes issue where GroupCollection fails to handle idchanged correctly, leaving record
  * permenantly stuck in its group.
  *
+ * Fiddle shows this issue persists in ext-6.0.1.250 but is fixed in ext-6.0.2.437
+ *
  * Discussion: https://www.sencha.com/forum/showthread.php?304879
+ * Fiddle: https://fiddle.sencha.com/#fiddle/tdg
  */
 Ext.define('Jarvus.hotfixes.util.GroupCollectionIdChange', {
     override: 'Ext.util.GroupCollection',
