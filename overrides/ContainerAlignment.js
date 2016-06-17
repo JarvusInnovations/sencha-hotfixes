@@ -12,16 +12,24 @@ Ext.define('Jarvus.hotfixes.ContainerAlignment', {
             alignmentInfo = me.callParent(arguments),
             scrollableParent = me.up('{getScrollable()}'),
             scrollable = scrollableParent && scrollableParent.getScrollable(),
-            topOffset = 0;
+            topOffset = 0, leftOffset = 0,
+            scrollableElement, scrollablePosition;
 
         if (scrollable) {
-            // shift alignToBox.top by containter padding and scroll position
-            topOffset -= scrollable.getElement().getY() - scrollable.getPosition().y;
+        	scrollableElement = scrollable.getElement();
+            scrollablePosition = scrollable.getPosition();
+
+            // shift top/left by scrollable container offset and scroll position
+            topOffset -= scrollableElement.getY() - scrollablePosition.y;
+            leftOffset -= scrollableElement.getX() - scrollablePosition.x;
         } else {
+        	// shift top/left by innerElement offset
             topOffset -= me.getParent().innerElement.getY();
+            leftOffset -= me.getParent().innerElement.getX();
         }
 
         alignmentInfo.stats.alignToBox.top += topOffset;
+        alignmentInfo.stats.alignToBox.left += leftOffset;
 
         return alignmentInfo;
     }
