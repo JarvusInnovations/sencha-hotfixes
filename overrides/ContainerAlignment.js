@@ -3,6 +3,7 @@
  * Fixes issue where alignTo doesn't take into account scrollable parents or viewports with padding
  *
  * Fiddle: https://fiddle.sencha.com/#fiddle/1c49
+ * Discussion: https://www.sencha.com/forum/showthread.php?311587
  */
 Ext.define('Jarvus.hotfixes.ContainerAlignment', {
     override: 'Ext.Container',
