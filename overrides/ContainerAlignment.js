@@ -1,6 +1,8 @@
 /*jslint browser: true, undef: true, laxcomma:true *//*global Ext*/
 /**
  * Fixes issue where alignTo doesn't take into account scrollable parents or viewports with padding
+ * 
+ * Fiddle: https://fiddle.sencha.com/#fiddle/1c49
  */
 Ext.define('Jarvus.hotfixes.ContainerAlignment', {
     override: 'Ext.Container',
