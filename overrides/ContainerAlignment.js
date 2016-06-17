@@ -1,4 +1,3 @@
-/*jslint browser: true, undef: true, laxcomma:true *//*global Ext*/
 /**
  * Fixes issue where alignTo doesn't take into account scrollable parents or viewports with padding
  *
