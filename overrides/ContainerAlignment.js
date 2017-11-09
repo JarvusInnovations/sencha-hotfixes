@@ -3,7 +3,10 @@
  *
  * Fiddle: https://fiddle.sencha.com/#fiddle/1c49
  * Discussion: https://www.sencha.com/forum/showthread.php?311587
+ *
+ * Issue still exists in ext-6.2.0.981 but hotfix needs updating
  */
+/*
 Ext.define('Jarvus.hotfixes.ContainerAlignment', {
     override: 'Ext.Container',
 
@@ -34,3 +37,4 @@ Ext.define('Jarvus.hotfixes.ContainerAlignment', {
         return alignmentInfo;
     }
 });
+*/
