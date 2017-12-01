@@ -2,6 +2,12 @@
 
 Provides a jarvus-hotfixes package for each ExtJS / Sencha Touch version containing all hotfixes managed by Jarvus Innovations. These packages strictly contains *only* overrides that restore framework components to their intended/documented behavior, and do not add features or opinionate framework usage. Our intention is that these packages be safe to include in every project from the start to save developers from going down framework bug rabbit-holes that have already been gone down.
 
+## Hotfix requirements
+
+- Restores indended or documented behavior of the framework -- no new features
+- Contains a link to both a forum post about the issue and a fiddle for reproducing/testing the issue
+- If copying a function body from the framework is necessary, there should be separate commits documenting the copying of the as-is function into the hotfix and for each change then made to that function body
+
 ## Supported frameworks
 Hotfix packages are currently being maintained for:
 
