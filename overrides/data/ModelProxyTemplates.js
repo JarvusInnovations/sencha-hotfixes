@@ -12,11 +12,12 @@ Ext.define('Jarvus.hotfixes.data.ModelProxyTemplates', {
         getProxy: function() {
             var me = this,
                 proxy = me.proxy,
+                proxyConfig = me.proxyConfig,
                 defaults;
 
             if (!proxy) {
                 // Check what was defined by the class (via onClassExtended):
-                proxy = me.proxyConfig;
+                proxy = proxyConfig;
 
                 if (!proxy || !proxy.isProxy) {
                     if (typeof proxy === 'string') {
@@ -24,10 +25,14 @@ Ext.define('Jarvus.hotfixes.data.ModelProxyTemplates', {
                             type: proxy
                         };
                     }
-                    // We have nothing or a config for the proxy. Get some defaults from
-                    // the Schema and smash anything we've provided over the top.
-                    defaults = me.schema.constructProxy(me);
-                    proxy = proxy ? Ext.merge(defaults, proxy) : defaults;
+
+                    // Only apply defaults from the Schema if defaultProxy was used
+                    if (!proxyConfig) {
+                        // We have nothing or a config for the proxy. Get some defaults from
+                        // the Schema and smash anything we've provided over the top.
+                        defaults = me.schema.constructProxy(me);
+                        proxy = proxy ? Ext.merge(defaults, proxy) : defaults;
+                    }
                 }
 
                 proxy = me.setProxy(proxy);
