@@ -9,7 +9,7 @@ Ext.define('Jarvus.hotfixes.grid.column.RtlAlign', {
 
 
     updateAlign: function(align) {
-        return (this.isLocalRtl() ? {
+        return (this.isLocalRtl && this.isLocalRtl() ? {
             start: 'right',
             end: 'left'
         } : {
