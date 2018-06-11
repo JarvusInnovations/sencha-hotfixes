@@ -7,7 +7,7 @@ Ext.define('Jarvus.hotfixes.view.TableReplaceScroll', {
     override: 'Ext.view.Table',
 
 
-    onReplace() {
+    onReplace: function() {
         this.saveScrollState();
         this.callParent(arguments);
         this.restoreScrollState();
