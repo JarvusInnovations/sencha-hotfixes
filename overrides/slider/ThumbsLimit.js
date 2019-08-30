@@ -20,7 +20,7 @@ Ext.define('Jarvus.hotfixes.slider.ThumbsLimit', {
         // Then shuffle the zIndices
         for (i = 0; i < ln; i++) {
             thumbs[i].el.setStyle('zIndex', zIndex);
-            zIndex -= 1000;
+            zIndex -= 10;
         }
     }
 });
