@@ -16,7 +16,12 @@ Ext.define('Jarvus.hotfixes.window.Unselectable', {
         me.el = el = Ext.get(el);
 
         // Disable drag to select. We must take over any drag selecting gestures.
-        el.addCls(Ext.baseCSSPrefix + 'unselectable');
+        if (
+            (delegate && delegate.isElement)
+            || !delegate
+        ) {
+            (delegate || el).addCls(Ext.baseCSSPrefix + 'unselectable');
+        }
 
         // The delegate option may also be an element on which to listen
         if (delegate && delegate.isElement) {
